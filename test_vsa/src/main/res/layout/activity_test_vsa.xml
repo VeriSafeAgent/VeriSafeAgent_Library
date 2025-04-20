@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test_VSA">
+
+    <!-- 호스트 입력 -->
+    <EditText
+        android:id="@+id/etHost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Server Host"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- 포트 입력 -->
+    <EditText
+        android:id="@+id/etPort"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Server Port"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/etHost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- 서버 연결 버튼 -->
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        app:layout_constraintTop_toBottomOf="@id/etPort"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDefinePredicate"
+        android:layout_margin="16dp" />
+
+    <!-- 프레디케이트 정의 버튼 -->
+    <Button
+        android:id="@+id/btnDefinePredicate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Define Predicate"
+        app:layout_constraintTop_toBottomOf="@id/etPort"
+        app:layout_constraintStart_toEndOf="@id/btnConnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- 트리거 테스트 버튼 -->
+    <Button
+        android:id="@+id/btnTestTrigger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test VSAOnClick"
+        app:layout_constraintTop_toBottomOf="@id/btnConnect"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- 로그 확인용 TextView -->
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#EFEFEF"
+        android:padding="8dp"
+        android:text="Logs..."
+        app:layout_constraintTop_toBottomOf="@id/btnTestTrigger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
