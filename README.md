@@ -2,6 +2,10 @@
 
 A developer library for building verifiable and safe Android applications with built-in state verification capabilities.
 
+## VeriSafeAgent System
+
+[VeriSafeAgent System on GitHub](https://github.com/VeriSafeAgent/VeriSafeAgent)
+
 ## Version Information
 
 - Library Version: 1.0.0
